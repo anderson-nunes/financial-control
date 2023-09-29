@@ -1,0 +1,28 @@
+{
+  "transactions": [
+    {
+      "description": "Passagem aérea",
+      "price": 2000,
+      "category": "Férias",
+      "type": "outcome",
+      "createdAt": "2023-09-29T17:10:40.021Z",
+      "id": 1
+    },
+    {
+      "description": "Passagem aérea",
+      "price": 2000,
+      "category": "Férias",
+      "type": "outcome",
+      "createdAt": "2023-09-29T19:02:54.427Z",
+      "id": 2
+    },
+    {
+      "description": "Pagamento",
+      "price": 6000,
+      "category": "Salário",
+      "type": "income",
+      "createdAt": "2023-09-29T19:04:35.455Z",
+      "id": 3
+    }
+  ]
+}

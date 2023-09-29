@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme["gray-900"]};
   padding: 2.5rem 0 7.5rem;
+
+  @media (max-width: 769px) {
+    width: 100%;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -10,12 +14,21 @@ export const HeaderContent = styled.div`
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.5rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  img {
-    width: 200px;
+  @media (max-width: 769px) {
+    img {
+      width: 10rem;
+    }
+  }
+
+  @media (max-width: 425px) {
+    img {
+      width: 8rem;
+    }
   }
 `;
 
@@ -31,6 +44,14 @@ export const NewTransactionButton = styled.button`
 
   &:hover {
     background: ${(props) => props.theme["green-700"]};
-    transition: background-color 0.5s;
+    transition: background-color 0.2s;
+  }
+
+  @media (max-width: 769px) {
+    height: 45px;
+  }
+
+  @media (max-width: 425px) {
+    height: 40px;
   }
 `;
