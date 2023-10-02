@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
-import { dark, light } from "../styles/themes/default";
+// import { useState, useEffect } from "react";
+// import { dark, light } from "../styles/themes/default";
 
-type Theme = "light" | "dark";
+// type Theme = "light" | "dark";
 
-export function useTheme() {
-  const [theme, setTheme] = useState<any>(light);
-  const [themeName, setThemeName] = useState("light");
+// export function useTheme() {
+//   const [theme, setTheme] = useState<any>(light);
+//   const [themeName, setThemeName] = useState("light");
 
-  function handleTheme(newTheme: Theme) {
-    setThemeName(newTheme);
-  }
+//   function handleTheme(newTheme: Theme) {
+//     setThemeName(newTheme);
+//   }
 
-  useEffect(() => {
-    setTheme(themeName === "light" ? light : dark);
-  }, [themeName]);
+//   useEffect(() => {
+//     setTheme(themeName === "light" ? light : dark);
+//   }, [themeName]);
 
-  return { theme, themeName, handleTheme };
-}
+//   return { theme, themeName, handleTheme };
+// }

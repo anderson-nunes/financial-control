@@ -1,38 +1,36 @@
-import { TransactionModal } from '../TransactionModal';
 import * as Dialog from '@radix-ui/react-dialog';
-// import logo002 from '../../assets/logo002.png'
-import * as S from './styles'
-import { ThemeProvider } from 'styled-components';
-import { dark, light } from '../../styles/themes/default';
-import { useTheme } from '../../hooks/useTheme';
-import { ToggleLeft, ToggleRight } from 'phosphor-react';
+import * as S from './styles';
+import { useContext } from 'react';
 
+import { ModeDarkLightContext } from '../../contexts/ModeDarkLightContext';
+import { TransactionModal } from '../TransactionModal';
 
 export const Header = () => {
+  const financialControlData = useContext(ModeDarkLightContext);
 
-  const { theme, themeName, handleTheme } = useTheme()
+  if (!financialControlData) {
+    // Trate o caso em que o contexto não foi fornecido corretamente
+    return null;
+  }
+
+  const { theme, themeName, handleTheme } = financialControlData;
+
 
   function changeTheme() {
-
-    handleTheme(themeName === 'light' ? 'dark' : 'light')
-
-    console.log('@aqui=>')
+    handleTheme(themeName === 'light' ? 'dark' : 'light');
   }
+
+  console.log(theme, themeName)
 
   const iconProps = {
     color: theme.icon,
-    onClick: changeTheme
-  }
+    onClick: changeTheme,
+  };
 
   return (
     <S.HeaderContainer>
       <S.HeaderContent>
-        {/* {themeName === 'light' ? (
-          <ToggleLeft size={32} {...iconProps} />
-        ) : (
-          <ToggleRight size={32} {...iconProps} />
-        )} */}
-        <button {...iconProps}>clique</button>
+        <button {...iconProps}>Clique</button>
 
         <Dialog.Root>
           <Dialog.Trigger asChild>
@@ -42,6 +40,8 @@ export const Header = () => {
         </Dialog.Root>
       </S.HeaderContent>
     </S.HeaderContainer>
-  )
-}
+  );
+};
+
+
 
