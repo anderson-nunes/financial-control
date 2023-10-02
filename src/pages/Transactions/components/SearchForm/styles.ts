@@ -34,7 +34,7 @@ export const SearchFormContainer = styled.form`
     &:not(:disabled):hover {
       background: ${(props) => props.theme["green-500"]};
       border-color: ${(props) => props.theme["green-500"]};
-      color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.text};
       transition:
         background-color overflow 0.2s,
         color 0.2s,

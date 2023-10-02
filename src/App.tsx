@@ -1,18 +1,18 @@
-import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from './styles/themes/default'
-import { GlobalStyle } from './styles/global'
-import { Transaction } from './pages/Transactions'
-import { TransactionsProvider } from './contexts/TransactionsContext'
+import { useEffect } from 'react';
+import { GlobalStyle } from './styles/global';
+import { Transaction } from './pages/Transactions';
+import { TransactionsProvider } from './contexts/TransactionsContext';
+import { useThemeDarkLightProvider, ThemeDarkLightProvider } from './contexts/ModeDarkLightContext';
 
-export function App() {
-
+export const App = () => {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeDarkLightProvider>
       <GlobalStyle />
       <TransactionsProvider>
         <Transaction />
       </TransactionsProvider>
-    </ThemeProvider>
-  )
-}
+    </ThemeDarkLightProvider>
+  );
+};
+
 

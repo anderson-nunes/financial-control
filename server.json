@@ -23,6 +23,14 @@
       "type": "income",
       "createdAt": "2023-09-29T19:04:35.455Z",
       "id": 3
+    },
+    {
+      "description": "Passeio",
+      "price": 1000,
+      "category": "Férias",
+      "type": "outcome",
+      "createdAt": "2023-09-29T22:05:10.572Z",
+      "id": 4
     }
   ]
 }

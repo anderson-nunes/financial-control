@@ -1,13 +1,26 @@
-import { TransactionModal } from '../TransactionModal';
 import * as Dialog from '@radix-ui/react-dialog';
-// import logo002 from '../../assets/logo002.png'
-import * as S from './styles'
+import * as S from './styles';
+import { useContext } from 'react';
+
+import { ModeDarkLightContext } from '../../contexts/ModeDarkLightContext';
+import { TransactionModal } from '../TransactionModal';
 
 export const Header = () => {
+  const { theme, themeName, handleTheme } = useContext(ModeDarkLightContext);
+
+  function changeTheme() {
+    handleTheme(themeName === 'light' ? 'dark' : 'light');
+  }
+
+  const iconProps = {
+    color: theme.icon,
+    onClick: changeTheme,
+  };
+
   return (
     <S.HeaderContainer>
       <S.HeaderContent>
-        <img src={''} alt="" />
+        <button {...iconProps}>Clique</button>
 
         <Dialog.Root>
           <Dialog.Trigger asChild>
@@ -17,6 +30,8 @@ export const Header = () => {
         </Dialog.Root>
       </S.HeaderContent>
     </S.HeaderContainer>
-  )
-}
+  );
+};
+
+
 
