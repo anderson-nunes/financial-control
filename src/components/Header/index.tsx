@@ -6,21 +6,11 @@ import { ModeDarkLightContext } from '../../contexts/ModeDarkLightContext';
 import { TransactionModal } from '../TransactionModal';
 
 export const Header = () => {
-  const financialControlData = useContext(ModeDarkLightContext);
-
-  if (!financialControlData) {
-    // Trate o caso em que o contexto não foi fornecido corretamente
-    return null;
-  }
-
-  const { theme, themeName, handleTheme } = financialControlData;
-
+  const { theme, themeName, handleTheme } = useContext(ModeDarkLightContext);
 
   function changeTheme() {
     handleTheme(themeName === 'light' ? 'dark' : 'light');
   }
-
-  console.log(theme, themeName)
 
   const iconProps = {
     color: theme.icon,

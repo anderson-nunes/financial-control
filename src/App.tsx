@@ -5,12 +5,6 @@ import { TransactionsProvider } from './contexts/TransactionsContext';
 import { useThemeDarkLightProvider, ThemeDarkLightProvider } from './contexts/ModeDarkLightContext';
 
 export const App = () => {
-  const { theme } = useThemeDarkLightProvider();
-
-  useEffect(() => {
-    console.log('@theme=>>', theme);
-  }, [theme]);
-
   return (
     <ThemeDarkLightProvider>
       <GlobalStyle />
