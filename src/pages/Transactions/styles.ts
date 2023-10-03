@@ -19,7 +19,8 @@ export const TransactionsTable = styled.table`
 
   td {
     padding: 1.25rem 2rem;
-    background: ${(props) => props.theme["gray-700"]};
+    background: ${(props) => props.theme.table};
+    color: ${(props) => props.theme.text};
 
     @media (max-width: 769px) {
       width: 10rem;
@@ -34,6 +35,17 @@ export const TransactionsTable = styled.table`
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
     }
+  }
+`;
+
+export const TrashContainer = styled.td`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    padding-left: 2rem;
+    cursor: pointer;
   }
 `;
 

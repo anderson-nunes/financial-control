@@ -14,7 +14,7 @@ interface ModeDarkLightData {
 export const ModeDarkLightContext = createContext<ModeDarkLightData>({
   theme: dark,
   themeName: 'dark',
-  handleTheme: (_theme: ThemeName) => {}
+  handleTheme: (_theme: ThemeName) => { }
 });
 
 interface ThemeProviderProps {
@@ -23,7 +23,7 @@ interface ThemeProviderProps {
 
 export function useThemeDarkLightProvider() {
   const [theme, setTheme] = useState<typeof light | typeof dark>(light);
-  const [themeName, setThemeName] = useState<ThemeName>('dark');
+  const [themeName, setThemeName] = useState<ThemeName>('light');
 
   function handleTheme(newTheme: ThemeName) {
     setThemeName(newTheme);

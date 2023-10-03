@@ -5,11 +5,16 @@ import * as S from './styles'
 import { TransactionsContext } from "../../contexts/TransactionsContext"
 import { dateFormatter, priceFormatter } from "../../utils/formatter"
 import { useContextSelector } from "use-context-selector"
+import { Trash } from "phosphor-react"
 
 export const Transaction = () => {
 
   const transactions = useContextSelector(TransactionsContext, (context) => {
-    return context.transactions
+    return context.transactions;
+  })
+
+  const removeAccount = useContextSelector(TransactionsContext, (context) => {
+    return context.removeAccount
   })
 
   return (
@@ -33,7 +38,9 @@ export const Transaction = () => {
                     </S.PriceHighLight>
                   </td>
                   <td>{transaction.category}</td>
-                  <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
+                  <S.TrashContainer>{dateFormatter.format(new Date(transaction.createdAt))}
+                    <Trash size={32} onClick={() => removeAccount(transaction.id)} />
+                  </S.TrashContainer>
                 </tr>
               )
             })}

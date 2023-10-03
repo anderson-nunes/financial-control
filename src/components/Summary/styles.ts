@@ -22,7 +22,7 @@ interface SummaryCardProps {
 }
 
 export const SummaryCard = styled.div<SummaryCardProps>`
-  background: ${(props) => props.theme["gray-600"]};
+  background: ${(props) => props.theme.summary};
   border-radius: 6px;
   padding: 2rem;
 
@@ -30,13 +30,14 @@ export const SummaryCard = styled.div<SummaryCardProps>`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: ${(props) => props.theme["gray-300"]};
+    color: ${(props) => props.theme.text};
   }
 
   strong {
     display: block;
     margin-top: 1rem;
     font-size: 2rem;
+    color: ${(props) => props.theme.text};
 
     @media (max-width: 769px) {
       width: 10rem;

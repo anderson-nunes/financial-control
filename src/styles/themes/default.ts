@@ -1,8 +1,13 @@
 export const light = {
   white: "#fff",
-  background: "#ffff",
-  text: "#000",
-  icon: "red",
+  background: "#E1E1E6",
+  modal: "#E1E1E6",
+  text: "#202024",
+  icon: "#fff",
+  search: "##202024",
+  table: "#fff",
+  background_header: "#C4C4CC",
+  summary: "#fff",
 
   "gray-100": "#E1E1E6",
   "gray-300": "#C4C4CC",
@@ -25,8 +30,13 @@ export const light = {
 export const dark = {
   white: "#fff",
   background: "#000",
+  background_header: "#121214",
+  modal: "#202024",
   text: "#fff",
-  icon: "red",
+  icon: "#fff",
+  search: "#202024",
+  table: "#29292E",
+  summary: "#323238",
 
   "gray-100": "#E1E1E6",
   "gray-300": "#C4C4CC",
@@ -46,4 +56,4 @@ export const dark = {
   "red-700": "#7A1921",
 };
 
-export type ColorTheme = typeof dark
+export type ColorTheme = typeof dark;

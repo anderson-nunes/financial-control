@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background: ${(props) => props.theme["gray-900"]};
+  background: ${(props) => props.theme.background_header};
   padding: 2.5rem 0 7.5rem;
+
+  /* svg {
+    ;
+  } */
 
   @media (max-width: 769px) {
     width: 100%;

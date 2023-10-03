@@ -23,6 +23,7 @@ interface TransactionContextType {
   transactions: Transaction[]
   fetchTransactions: (query: string) => Promise<void>;
   createTransaction: (data: CreateTransactionInput) => Promise<void>
+  removeAccount: (id: number) => void
 }
 
 interface TransactionsProviderProps {
@@ -48,7 +49,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   },
     [])
 
-
   const createTransaction = useCallback(async (data: CreateTransactionInput) => {
 
     const { description, price, category, type } = data
@@ -68,11 +68,17 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     fetchTransactions()
   }, [])
 
+  const removeAccount = (id: number) => {
+    const updateAccount = transactions.filter((account) => account.id !== id)
+    setTransactions(updateAccount)
+  }
+
   return (
     <TransactionsContext.Provider value={{
       transactions,
       fetchTransactions,
-      createTransaction
+      createTransaction,
+      removeAccount,
     }}>
       {children}
     </TransactionsContext.Provider>

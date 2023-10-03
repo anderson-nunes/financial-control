@@ -1,9 +1,9 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import * as S from './styles';
 import { useContext } from 'react';
-
 import { ModeDarkLightContext } from '../../contexts/ModeDarkLightContext';
 import { TransactionModal } from '../TransactionModal';
+import { ToggleLeft, ToggleRight } from 'phosphor-react';
 
 export const Header = () => {
   const { theme, themeName, handleTheme } = useContext(ModeDarkLightContext);
@@ -20,8 +20,11 @@ export const Header = () => {
   return (
     <S.HeaderContainer>
       <S.HeaderContent>
-        <button {...iconProps}>Clique</button>
-
+        {themeName === 'light' ? (
+          <ToggleLeft size={48} {...iconProps} />
+        ) : (
+          <ToggleRight size={48} {...iconProps} />
+        )}
         <Dialog.Root>
           <Dialog.Trigger asChild>
             <S.NewTransactionButton>Nova transação</S.NewTransactionButton>

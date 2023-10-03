@@ -14,12 +14,17 @@ export const Content = styled(Dialog.Content)`
   min-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
-  background: ${(props) => props.theme["gray-800"]};
+  background: ${(props) => props.theme.modal};
 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  h2 {
+    font-size: 1.6rem;
+    color: ${(props) => props.theme.text};
+  }
 
   @media (max-width: 769px) {
     min-width: 23rem;
@@ -29,10 +34,6 @@ export const Content = styled(Dialog.Content)`
     left: 0;
     transform: none;
     bottom: 0;
-
-    h2 {
-      font-size: 1.3rem;
-    }
   }
 
   form {
@@ -48,8 +49,8 @@ export const Content = styled(Dialog.Content)`
     input {
       border-radius: 6px;
       border: 0;
-      background: ${(props) => props.theme["gray-900"]};
-      color: ${(props) => props.theme["gray-300"]};
+      background: ${(props) => props.theme.table};
+      color: ${(props) => props.theme.text};
       padding: 1rem;
 
       &::placeholder {
