@@ -6,16 +6,21 @@ import { TransactionsContext } from "../../contexts/TransactionsContext"
 import { dateFormatter, priceFormatter } from "../../utils/formatter"
 import { useContextSelector } from "use-context-selector"
 import { Trash } from "phosphor-react"
+// import { useContext } from "react"
 
 export const Transaction = () => {
+
+  // const { transactions, deleteTransaction } = useContext(TransactionsContext)
 
   const transactions = useContextSelector(TransactionsContext, (context) => {
     return context.transactions;
   })
 
-  const removeAccount = useContextSelector(TransactionsContext, (context) => {
-    return context.removeAccount
+  const deleteTransactions = useContextSelector(TransactionsContext, (context) => {
+    return context.deleteTransaction
   })
+
+
 
   return (
     <div>
@@ -39,7 +44,7 @@ export const Transaction = () => {
                   </td>
                   <td>{transaction.category}</td>
                   <S.TrashContainer>{dateFormatter.format(new Date(transaction.createdAt))}
-                    <Trash size={32} onClick={() => removeAccount(transaction.id)} />
+                    <Trash size={32} onClick={() => deleteTransactions(transaction.id)} />
                   </S.TrashContainer>
                 </tr>
               )

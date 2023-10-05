@@ -22,11 +22,16 @@ interface ThemeProviderProps {
 }
 
 export function useThemeDarkLightProvider() {
-  const [theme, setTheme] = useState<typeof light | typeof dark>(light);
-  const [themeName, setThemeName] = useState<ThemeName>('light');
+  const storedThemeName = localStorage.getItem('themeName');
+  const initialThemeName: ThemeName = storedThemeName ? (storedThemeName as ThemeName) : 'light';
+
+  const [theme, setTheme] = useState<typeof light | typeof dark>(initialThemeName === 'light' ? light : dark);
+
+  const [themeName, setThemeName] = useState<ThemeName>(initialThemeName);
 
   function handleTheme(newTheme: ThemeName) {
     setThemeName(newTheme);
+    localStorage.setItem('themeName', newTheme);
   }
 
   useEffect(() => {

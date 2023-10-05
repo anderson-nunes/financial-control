@@ -23,7 +23,7 @@ interface TransactionContextType {
   transactions: Transaction[]
   fetchTransactions: (query: string) => Promise<void>;
   createTransaction: (data: CreateTransactionInput) => Promise<void>
-  removeAccount: (id: number) => void
+  deleteTransaction: (id: number) => void
 }
 
 interface TransactionsProviderProps {
@@ -64,21 +64,40 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   },
     [])
 
+  const deleteTransaction = useCallback(async (id: number) => {
+    try {
+      // Remova ele da lista de transações que eu exibo no front
+      setTransactions((prevTransactions) =>
+        prevTransactions.filter((transaction) => transaction.id !== id)
+      );
+
+      // Faço a solicitação DELETE para a API
+      const response = await api.delete(`transactions/${id}`);
+
+      if (response.status !== 204) {
+        // Se a solicitação DELETE não foi bem-sucedida, exiba uma mensagem de erro
+        console.error('Erro ao excluir a transação:', response.status);
+      }
+    } catch (error) {
+      // Se ocorrer um erro na solicitação DELETE, coloque a transação de volta na lista local
+      setTransactions((prevTransactions) =>
+        prevTransactions.filter((transaction) => transaction.id !== id)
+      );
+      console.error('Erro ao excluir a transação:', error);
+    }
+  }, []);
+
   useEffect(() => {
     fetchTransactions()
-  }, [])
 
-  const removeAccount = (id: number) => {
-    const updateAccount = transactions.filter((account) => account.id !== id)
-    setTransactions(updateAccount)
-  }
+  }, [])
 
   return (
     <TransactionsContext.Provider value={{
       transactions,
       fetchTransactions,
       createTransaction,
-      removeAccount,
+      deleteTransaction,
     }}>
       {children}
     </TransactionsContext.Provider>

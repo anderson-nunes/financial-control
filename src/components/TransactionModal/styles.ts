@@ -28,9 +28,9 @@ export const Content = styled(Dialog.Content)`
 
   @media (max-width: 769px) {
     min-width: 23rem;
-    margin: 0.7rem;
+    /* margin: 0.7rem; */
     border-radius: 18px 18px 0 0;
-    top: 37%;
+    top: 20%;
     left: 0;
     transform: none;
     bottom: 0;

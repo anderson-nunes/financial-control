@@ -20,17 +20,17 @@ export const Header = () => {
   return (
     <S.HeaderContainer>
       <S.HeaderContent>
-        {themeName === 'light' ? (
-          <ToggleLeft size={48} {...iconProps} />
-        ) : (
-          <ToggleRight size={48} {...iconProps} />
-        )}
         <Dialog.Root>
           <Dialog.Trigger asChild>
             <S.NewTransactionButton>Nova transação</S.NewTransactionButton>
           </Dialog.Trigger>
           <TransactionModal />
         </Dialog.Root>
+        {themeName === 'light' ? (
+          <ToggleLeft size={48} {...iconProps} />
+        ) : (
+          <ToggleRight size={48} {...iconProps} />
+        )}
       </S.HeaderContent>
     </S.HeaderContainer>
   );

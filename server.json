@@ -1,44 +1,12 @@
 {
   "transactions": [
     {
-      "description": "Passagem aérea",
-      "price": 2000,
-      "category": "Férias",
-      "type": "outcome",
-      "createdAt": "2023-09-29T17:10:40.021Z",
-      "id": 1
-    },
-    {
-      "description": "Passagem aérea",
-      "price": 2000,
-      "category": "Férias",
-      "type": "outcome",
-      "createdAt": "2023-09-29T19:02:54.427Z",
-      "id": 2
-    },
-    {
-      "description": "Pagamento",
-      "price": 6000,
-      "category": "Salário",
+      "description": "sasasas",
+      "price": 212121,
+      "category": "sasasas",
       "type": "income",
-      "createdAt": "2023-09-29T19:04:35.455Z",
-      "id": 3
-    },
-    {
-      "description": "Passeio",
-      "price": 1000,
-      "category": "Férias",
-      "type": "outcome",
-      "createdAt": "2023-09-29T22:05:10.572Z",
-      "id": 4
-    },
-    {
-      "description": "Curso Web FrontEnd",
-      "price": 10000,
-      "category": "Estudos",
-      "type": "outcome",
-      "createdAt": "2023-10-03T01:18:31.864Z",
-      "id": 5
+      "createdAt": "2023-10-05T12:56:13.899Z",
+      "id": 1
     }
   ]
 }
