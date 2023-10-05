@@ -1,12 +1,3 @@
 {
-  "transactions": [
-    {
-      "description": "sasasas",
-      "price": 212121,
-      "category": "sasasas",
-      "type": "income",
-      "createdAt": "2023-10-05T12:56:13.899Z",
-      "id": 1
-    }
-  ]
+  "transactions": []
 }

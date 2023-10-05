@@ -3,7 +3,8 @@ import * as S from './styles';
 import { useContext } from 'react';
 import { ModeDarkLightContext } from '../../contexts/ModeDarkLightContext';
 import { TransactionModal } from '../TransactionModal';
-import { ToggleLeft, ToggleRight } from 'phosphor-react';
+import { Moon, Sun, ToggleLeft, ToggleRight } from 'phosphor-react';
+import logo from '../../assets/logo.png'
 
 export const Header = () => {
   const { theme, themeName, handleTheme } = useContext(ModeDarkLightContext);
@@ -19,6 +20,7 @@ export const Header = () => {
 
   return (
     <S.HeaderContainer>
+      <S.Image src={logo} alt="" />
       <S.HeaderContent>
         <Dialog.Root>
           <Dialog.Trigger asChild>
@@ -27,9 +29,9 @@ export const Header = () => {
           <TransactionModal />
         </Dialog.Root>
         {themeName === 'light' ? (
-          <ToggleLeft size={48} {...iconProps} />
+          <Sun size={36} {...iconProps} />
         ) : (
-          <ToggleRight size={48} {...iconProps} />
+          <Moon size={36} {...iconProps} />
         )}
       </S.HeaderContent>
     </S.HeaderContainer>

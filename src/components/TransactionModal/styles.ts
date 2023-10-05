@@ -62,7 +62,7 @@ export const Content = styled(Dialog.Content)`
       height: 58px;
       border: 0;
       background: ${(props) => props.theme["green-500"]};
-      color: ${(props) => props.theme.text};
+      color: #ffff;
       font-weight: bold;
       padding: 0 1.25rem;
       border-radius: 6px;
@@ -109,7 +109,7 @@ interface TransactionTypeButtonProps {
 
 export const Btn = styled(RadioGroup.Item)<TransactionTypeButtonProps>`
   background: ${(props) => props.theme["gray-700"]};
-  color: ${(props) => props.theme["gray-300"]};
+  color: #ffff;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -127,7 +127,7 @@ export const Btn = styled(RadioGroup.Item)<TransactionTypeButtonProps>`
   }
 
   &[data-state="checked"] {
-    color: ${(props) => props.theme.text};
+    color: #ffff;
     background: ${(props) =>
       props.variant === "income"
         ? props.theme["green-500"]

@@ -25,12 +25,12 @@ export const Summary = () => {
         <strong>{priceFormatter.format(summary.outcome)}</strong>
       </S.SummaryCard>
 
-      <S.SummaryCard variant='green'>
+      <S.SummaryCard variant='green' text='white'>
         <header>
           <span>Total</span>
           <CurrencyDollar size={32} color='#ffff' />
         </header>
-        <strong>{priceFormatter.format(summary.total)}</strong>
+        <strong >{priceFormatter.format(summary.total)}</strong>
       </S.SummaryCard>
     </S.SummaryContainer>
   )

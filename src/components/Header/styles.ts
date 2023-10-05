@@ -2,15 +2,18 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme.background_header};
-  padding: 2.5rem 0 7.5rem;
-
-  /* svg {
-    ;
-  } */
+  padding: 1.5rem 22rem 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 769px) {
     width: 100%;
   }
+`;
+
+export const Image = styled.img`
+  width: 100px;
 `;
 
 export const HeaderContent = styled.div`
@@ -20,7 +23,8 @@ export const HeaderContent = styled.div`
   padding: 0 1.5rem;
 
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: right;
   align-items: center;
 
   @media (max-width: 769px) {
@@ -40,11 +44,12 @@ export const NewTransactionButton = styled.button`
   height: 50px;
   border: 0;
   background: ${(props) => props.theme["green-500"]};
-  color: ${(props) => props.theme.text};
+  color: #fff;
   font-weight: bold;
   padding: 0 1.25rem;
   border-radius: 6px;
   cursor: pointer;
+  margin-right: 1.2rem;
 
   &:hover {
     background: ${(props) => props.theme["green-700"]};
