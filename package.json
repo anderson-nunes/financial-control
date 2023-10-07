@@ -10,7 +10,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint src --ext .tsx,.ts --fix",
     "tsc:check": "tsc",
-    "build": "npm-run-all -l -p vite:build start:server",
+    "build": "npm-run-all -l -p vite:build",
     "vite:build": "vite build",
     "preview": "vite preview"
   },
