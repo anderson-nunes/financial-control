@@ -6,12 +6,11 @@
   "scripts": {
     "dev": "npm-run-all -l -p start:front start:server",
     "start:front": "vite",
-    "start:server": "json-server server.json -p 3000 -w -d 500",
+    "start:server": "json-server server.json -p 5757 -w -d 500",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint src --ext .tsx,.ts --fix",
-    "tsc:check": "tsc",
-    "build": "npm-run-all -l -p vite:build",
-    "vite:build": "vite build",
+    "build": "tsc && vite build",
+    "vite": "vite --port 3000",
     "preview": "vite preview"
   },
   "dependencies": {
