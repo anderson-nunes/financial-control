@@ -3,7 +3,7 @@ import * as S from './styles';
 import { useContext } from 'react';
 import { ModeDarkLightContext } from '../../contexts/ModeDarkLightContext';
 import { TransactionModal } from '../TransactionModal';
-import { Moon, Sun, ToggleLeft, ToggleRight } from 'phosphor-react';
+import { Moon, Sun } from 'phosphor-react';
 import logo from '../../assets/logo.png'
 
 export const Header = () => {
