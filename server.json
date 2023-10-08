@@ -1,20 +1,4 @@
 {
-  "transactions": [
-    {
-      "description": "Salario",
-      "price": 2000,
-      "category": "Salario",
-      "type": "income",
-      "createdAt": "2023-10-07T20:02:34.667Z",
-      "id": 1
-    },
-    {
-      "description": "Aluguel",
-      "price": 1000,
-      "category": "aluguel",
-      "type": "outcome",
-      "createdAt": "2023-10-07T20:02:48.271Z",
-      "id": 2
-    }
-  ]
+  "transactions": []
 }
+
