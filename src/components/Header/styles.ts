@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.div`
+  width: 100%;
   background: ${(props) => props.theme.background_header};
-  padding: 1.5rem 22rem 7.5rem;
+`;
+
+export const Header = styled.header`
+  background: ${(props) => props.theme.background_header};
+  padding: 0.5rem 2rem 6.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +15,16 @@ export const HeaderContainer = styled.header`
   @media (max-width: 769px) {
     width: 100%;
   }
+`;
+
+export const SvgContent = styled.div`
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: right;
+  background-color: ${(props) => props.theme.background_header};
 `;
 
 export const Image = styled.img`
@@ -23,8 +38,8 @@ export const HeaderContent = styled.div`
   padding: 0 1.5rem;
 
   display: flex;
-  /* justify-content: space-between; */
-  justify-content: right;
+  justify-content: space-between;
+  /* justify-content: right; */
   align-items: center;
 
   @media (max-width: 769px) {

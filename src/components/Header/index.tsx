@@ -20,20 +20,26 @@ export const Header = () => {
 
   return (
     <S.HeaderContainer>
-      <S.Image src={logo} alt="" />
-      <S.HeaderContent>
-        <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <S.NewTransactionButton>Nova transação</S.NewTransactionButton>
-          </Dialog.Trigger>
-          <TransactionModal />
-        </Dialog.Root>
+      <S.SvgContent>
         {themeName === 'light' ? (
           <Sun size={36} {...iconProps} />
         ) : (
           <Moon size={36} {...iconProps} />
         )}
-      </S.HeaderContent>
+      </S.SvgContent>
+      <S.Header>
+        <S.HeaderContent>
+          <S.Image src={logo} alt="" />
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <S.NewTransactionButton>Nova transação</S.NewTransactionButton>
+            </Dialog.Trigger>
+            <TransactionModal />
+          </Dialog.Root>
+
+        </S.HeaderContent>
+
+      </S.Header>
     </S.HeaderContainer>
   );
 };
