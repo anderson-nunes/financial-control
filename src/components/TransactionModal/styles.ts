@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 export const Overlay = styled(Dialog.Overlay)`
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
 `;
@@ -27,13 +27,17 @@ export const Content = styled(Dialog.Content)`
   }
 
   @media (max-width: 769px) {
-    min-width: 23rem;
-    /* margin: 0.7rem; */
-    border-radius: 18px 18px 0 0;
-    top: 20%;
+    min-width: 18rem;
+    border-radius: 18px 18px;
+    /* top: 20%;
     left: 0;
     transform: none;
     bottom: 0;
+    margin: 0.3rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
   }
 
   form {

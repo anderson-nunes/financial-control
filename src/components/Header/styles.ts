@@ -24,7 +24,7 @@ export const SvgContent = styled.div`
   padding-top: 1rem;
   display: flex;
   justify-content: right;
-  background-color: ${(props) => props.theme.background_header};
+  /* background-color: ${(props) => props.theme.background_header}; */
 `;
 
 export const Image = styled.img`
