@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderBox = styled.header`
   background: ${(props) => props.theme.background_header};
-  padding: 0.5rem 2rem 6.5rem;
+  padding: 1.2rem 2rem 6.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ export const HeaderBox = styled.header`
   margin: 0 auto;
 
   svg {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
 
   @media (max-width: 769px) {
@@ -31,11 +31,8 @@ export const HeaderContent = styled.div`
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 1.5rem;
-
   display: flex;
   justify-content: right;
-  /* justify-content: right; */
   align-items: center;
 
   @media (max-width: 769px) {
