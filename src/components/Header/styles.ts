@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderBox = styled.header`
   background: ${(props) => props.theme.background_header};
-  padding: 1.2rem 2rem 6.5rem;
+  padding: 1.2rem 1rem 6.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

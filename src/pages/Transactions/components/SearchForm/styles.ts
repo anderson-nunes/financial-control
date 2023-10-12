@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SearchFormContainer = styled.form`
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 100%;
 
   input {

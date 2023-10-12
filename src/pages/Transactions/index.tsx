@@ -29,28 +29,30 @@ export const Transaction = () => {
 
       <S.TransactionsContainer>
         <SearchForm />
-        <S.TransactionsTable>
-          <tbody>
-            {transactions.map(transaction => {
-              return (
-                <tr key={transaction.id}>
-                  <td width='50%'>{transaction.description}</td>
-                  <td>
-                    <S.PriceHighLight
-                      variant={transaction.type}>
-                      {transaction.type === 'outcome' && '- '}
-                      {priceFormatter.format(transaction.price)}
-                    </S.PriceHighLight>
-                  </td>
-                  <td>{transaction.category}</td>
-                  <S.TrashContainer>{dateFormatter.format(new Date(transaction.createdAt))}
-                    <Trash size={32} onClick={() => deleteTransactions(transaction.id)} />
-                  </S.TrashContainer>
-                </tr>
-              )
-            })}
-          </tbody>
-        </S.TransactionsTable>
+        <S.TransactionsTableContainer>
+          <S.TransactionsTable>
+            <tbody>
+              {transactions.map(transaction => {
+                return (
+                  <tr key={transaction.id}>
+                    <td width='50%'>{transaction.description}</td>
+                    <td>
+                      <S.PriceHighLight
+                        variant={transaction.type}>
+                        {transaction.type === 'outcome' && '- '}
+                        {priceFormatter.format(transaction.price)}
+                      </S.PriceHighLight>
+                    </td>
+                    <td>{transaction.category}</td>
+                    <S.TrashContainer>{dateFormatter.format(new Date(transaction.createdAt))}
+                      <Trash size={32} onClick={() => deleteTransactions(transaction.id)} />
+                    </S.TrashContainer>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </S.TransactionsTable>
+        </S.TransactionsTableContainer>
       </S.TransactionsContainer>
 
     </div>

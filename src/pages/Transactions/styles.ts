@@ -7,8 +7,12 @@ export const TransactionsContainer = styled.main`
   padding: 0 1.5rem;
 
   @media (max-width: 769px) {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
+`;
+
+export const TransactionsTableContainer = styled.div`
+  overflow-x: auto;
 `;
 
 export const TransactionsTable = styled.table`
@@ -21,10 +25,6 @@ export const TransactionsTable = styled.table`
     padding: 1.25rem 2rem;
     background: ${(props) => props.theme.table};
     color: ${(props) => props.theme.text};
-
-    @media (max-width: 769px) {
-      width: 10rem;
-    }
 
     &:first-child {
       border-top-left-radius: 6px;
@@ -42,10 +42,11 @@ export const TrashContainer = styled.td`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   svg {
-    padding-left: 2rem;
     cursor: pointer;
+    margin-left: 1rem;
   }
 `;
 
