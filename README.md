@@ -1,5 +1,3 @@
-# DT Money
-
 <h1 align="center">Financial Control</h1>
 <div align="center">
 
