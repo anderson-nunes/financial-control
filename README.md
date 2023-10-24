@@ -1,7 +1,10 @@
 # DT Money
 
+<h1 align="center">Financial Control</h1>
 <div align="center">
-  <img width="700" src="https://user-images.githubusercontent.com/86172286/231017284-847cfe45-329c-44a8-b0ac-05c4c5e9995e.gif">
+
+![Projeto gif](./src/assets/financial_control.gif)
+
 </div>
 
 ## Criando um projeto React com o Vite
